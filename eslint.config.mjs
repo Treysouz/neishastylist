@@ -1,25 +1,17 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-    ignores: [
-      ".open-next/**",
-      ".next/**",
-      "cloudlfare-env.d.ts",
-      ".vercel/**",
-      "next-env.d.ts",
-    ],
-  },
+export default defineConfig([
+  globalIgnores([
+    ".next/**",
+    ".vercel/**",
+    ".open-next/**",
+    "next-env.d.ts",
+    "cloudflare-env.d.ts",
+  ]),
+  nextCoreWebVitals,
+  nextTypescript,
   {
     rules: {
       "react/self-closing-comp": [
@@ -31,6 +23,4 @@ const eslintConfig = [
       ],
     },
   },
-];
-
-export default eslintConfig;
+]);
