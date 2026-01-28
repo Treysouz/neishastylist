@@ -9,11 +9,12 @@ import {
   useState,
 } from "react";
 import { CarouselButton, ImageCard, ImageModalContent } from "./components";
+import { HygraphAsset } from "@/types/hygraph.types";
 import { motion } from "motion/react";
 
 interface CarouselProps {
   /** Array of image Urls */
-  imageUrls: string[];
+  imageUrls: HygraphAsset[];
 }
 
 export default function Carousel({ imageUrls }: CarouselProps) {
@@ -91,13 +92,13 @@ export default function Carousel({ imageUrls }: CarouselProps) {
           viewport={{ once: true, amount: 0.2 }}
           ref={carouselRef}
         >
-          {imageUrls.map((imgUrl) => (
+          {imageUrls.map(({ url }) => (
             <ImageCard
-              imgUrl={imgUrl}
+              imgUrl={url}
               onClick={() => {
-                showImageModal(imgUrl);
+                showImageModal(url);
               }}
-              key={imgUrl}
+              key={url}
             />
           ))}
         </motion.div>

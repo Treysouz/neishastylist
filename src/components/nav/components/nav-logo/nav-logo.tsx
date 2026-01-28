@@ -5,7 +5,7 @@ export default function NavLogo() {
   return (
     <Link className="flex flex-row items-center" href="/">
       <Image
-        src="https://xfsqopvtvhgawpcxjwae.supabase.co/storage/v1/object/public/images/logo.webp"
+        src="https://us-west-2.graphassets.com/cmkxlquti0e1z07ls6wq75986/cmkygekp48m0v08louzvacmlc"
         width={1298}
         height={1302}
         alt="Neishastylist"

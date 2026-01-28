@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { navItemConfigs } from "@/components/nav/nav";
-import { mockSupabaseRoutes } from "./global-setup";
+import { mockHygraphRoutes } from "./global-setup";
 
 test.describe("Navigation", () => {
   test.beforeEach(async ({ page }) => {
-    // Mock Supabase API calls
-    await mockSupabaseRoutes(page);
+    // Mock Hygraph API calls
+    await mockHygraphRoutes(page);
     // Navigate to the home page
     await page.goto("/");
   });

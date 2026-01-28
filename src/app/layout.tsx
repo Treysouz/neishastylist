@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans, Playwrite_CU } from "next/font/google";
 import { NavBar } from "@/components";
 import { ContactSection } from "@/sections";
+import ApolloProviderWrapper from "@/apollo";
 
 import "./globals.css";
 
@@ -33,10 +34,12 @@ export default function RootLayout({
     >
       <body className={`flex flex-col h-full ${notoSans.className}`}>
         <NavBar />
-        <main className="grow">
-          {children}
-          <ContactSection />
-        </main>
+        <ApolloProviderWrapper>
+          <main className="grow">
+            {children}
+            <ContactSection />
+          </main>
+        </ApolloProviderWrapper>
         <footer className="text-gray-400 bg-theme-dark text-xs sm:text-sm flex flex-col space-y-2 text-center px-8 pb-8 xl:px-16 xl:pb-16">
           <span>
             Made by&nbsp;

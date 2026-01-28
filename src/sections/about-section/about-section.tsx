@@ -21,7 +21,7 @@ export default function AboutSection() {
         >
           <Card className="rounded-box shadow-lg h-full">
             <Image
-              src="https://xfsqopvtvhgawpcxjwae.supabase.co/storage/v1/object/public/images/hero.webp"
+              src="https://us-west-2.graphassets.com/cmkxlquti0e1z07ls6wq75986/cmkygekm08m0e08loi445oxg0"
               width={2560}
               height={1708}
               alt="Neishastylist"
