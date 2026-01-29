@@ -2,9 +2,9 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Carousel from "./carousel";
 
 const mockImageUrls = [
-  "/images/test1.jpg",
-  "/images/test2.jpg",
-  "/images/test3.jpg",
+  { url: "/images/test1.jpg" },
+  { url: "/images/test2.jpg" },
+  { url: "/images/test3.jpg" },
 ];
 
 beforeEach(() => {

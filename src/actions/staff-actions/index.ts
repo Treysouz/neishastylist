@@ -1,3 +1,7 @@
+"use cache";
+
+import { cacheLife } from "next/cache";
+
 interface MockUser {
   id: number;
   firstName: string;
@@ -10,6 +14,7 @@ interface MockUser {
 export const getMockStaff = async (): Promise<
   { users: MockUser[] } | undefined
 > => {
+  cacheLife("days");
   try {
     const response = await fetch("https://dummyjson.com/users");
 

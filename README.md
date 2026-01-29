@@ -18,7 +18,7 @@ A modern portfolio website for a professional hairstylist salon, showcasing thei
 
 ### Data & State Management
 
-- **[Supabase](https://supabase.com/)** - Backend provider for database and API
+- **[Hygraph](https://hygraph.com/)** - Backend provider for database and API
 
 ### Misc. Libraries
 

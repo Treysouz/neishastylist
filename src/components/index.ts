@@ -6,3 +6,4 @@ export { default as ErrorBoundary } from "./error-boundary/error-boundary";
 export { default as SVGS } from "./svgs/svgs";
 export { default as Carousel } from "./carousel/carousel";
 export { default as Modal } from "./modal/modal";
+export { default as Fallback } from "./fallback/fallback";
